@@ -78,7 +78,7 @@ const galleryImages = [
 ];
 
 const supporterLogos = [
-  { src: "/imperial%20logl.png", alt: "Imperial" },
+  { src: "/imperial%20logo.png", alt: "Imperial" },
   { src: "/NUS%20logo.png", alt: "NUS" },
   { src: "/GRIP%20logo.png", alt: "National GRIP" },
 ];
@@ -137,9 +137,14 @@ export default function Home() {
             <Grid item xs={12} md={6}>
               <Stack spacing={3}>
                 <Chip
-                  label="EXTRA EYES ON EVERY FRUIT, ALL CHECKS DIGITISED."
+                  label="Extra eyes on every fruit, all checks digitised."
                   color="secondary"
-                  sx={{ width: "fit-content", fontWeight: 600 }}
+                  sx={{
+                    width: "fit-content",
+                    fontWeight: 600,
+                    textTransform: "uppercase",
+                    letterSpacing: 0.6,
+                  }}
                 />
                 <Typography variant="h3" component="h1" fontWeight={700}>
                   Digitise fruit inspection with QCVISION.
