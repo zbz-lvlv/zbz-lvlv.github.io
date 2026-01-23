@@ -21,29 +21,66 @@ import VisibilityRoundedIcon from "@mui/icons-material/VisibilityRounded";
 
 const highlights = [
   {
-    title: "AI Quality Inspection",
-    description:
-      "Deploy computer vision models that detect defects in milliseconds and scale across production lines.",
+    title: "Improve operational efficiency",
+    description: "Consistent sorting quality while automating documentation.",
     icon: <VisibilityRoundedIcon fontSize="medium" color="primary" />,
   },
   {
-    title: "Operational Insights",
-    description:
-      "Surface real-time analytics that help teams prevent scrap, reduce downtime, and improve yield.",
+    title: "Easy adoption",
+    description: "Image-first design enables immediate adoption by workers.",
     icon: <InsightsRoundedIcon fontSize="medium" color="primary" />,
   },
   {
-    title: "Factory Automation",
-    description:
-      "Integrate with existing equipment to automate quality workflows and ensure consistent results.",
+    title: "Easy deployment",
+    description: "Adapts to custom sorting standards without lengthy setup.",
     icon: <PrecisionManufacturingRoundedIcon fontSize="medium" color="primary" />,
   },
 ];
 
 const stats = [
-  { label: "Inspection speed", value: "<1s" },
-  { label: "Defect coverage", value: "99%" },
-  { label: "Factories onboarded", value: "250+" },
+  { label: "Value lost to manual errors", value: "26.6%" },
+  { label: "Cash impact vs profit", value: "5x" },
+  { label: "SOM revenue target", value: "$552K" },
+];
+
+const marketStats = [
+  {
+    label: "SOM",
+    value: "$552K",
+    detail: "75 clients revenue in 2028",
+  },
+  {
+    label: "SAM",
+    value: "$189M",
+    detail: "UK and SEA attainable market",
+  },
+  {
+    label: "TAM",
+    value: "$15B",
+    detail: "Global fresh produce quality control market",
+  },
+];
+
+const pricingTiers = [
+  { value: "$7,200", detail: "~10,000 scans" },
+  { value: "$21,000", detail: "~30,000 scans" },
+  { value: "$36,000", detail: "~50,000 scans" },
+];
+
+const galleryImages = [
+  { src: "/Picture2.png", alt: "Fruit inspection example" },
+  { src: "/Picture3.png", alt: "Produce sorting workflow" },
+  { src: "/Picture4.png", alt: "Quality grading snapshot" },
+  { src: "/Picture5.png", alt: "Fruit scanning close-up" },
+  { src: "/Picture6.png", alt: "Produce quality dashboard" },
+  { src: "/Picture7.png", alt: "Packhouse inspection station" },
+  { src: "/Picture8.png", alt: "Grading process overview" },
+];
+
+const supporterLogos = [
+  { src: "/imperial%20logl.png", alt: "Imperial" },
+  { src: "/NUS%20logo.png", alt: "NUS" },
+  { src: "/GRIP%20logo.png", alt: "National GRIP" },
 ];
 
 export default function Home() {
@@ -63,16 +100,16 @@ export default function Home() {
                 QCVision
               </Typography>
               <Typography variant="caption" color="text.secondary">
-                Intelligent quality control
+                AI-powered fruit inspection
               </Typography>
             </Stack>
           </Stack>
           <Stack direction="row" spacing={2} alignItems="center">
-            <Button component={Link} href="#solutions" color="inherit">
-              Solutions
+            <Button component={Link} href="#solution" color="inherit">
+              Solution
             </Button>
-            <Button component={Link} href="#insights" color="inherit">
-              Insights
+            <Button component={Link} href="#market" color="inherit">
+              Market
             </Button>
             <Button
               component={Link}
@@ -100,17 +137,44 @@ export default function Home() {
             <Grid item xs={12} md={6}>
               <Stack spacing={3}>
                 <Chip
-                  label="Computer vision for manufacturing"
+                  label="EXTRA EYES ON EVERY FRUIT, ALL CHECKS DIGITISED."
                   color="secondary"
                   sx={{ width: "fit-content", fontWeight: 600 }}
                 />
                 <Typography variant="h3" component="h1" fontWeight={700}>
-                  Raise quality standards with intelligent inspection.
+                  Digitise fruit inspection with QCVISION.
                 </Typography>
-                <Typography variant="h6" color="text.secondary">
-                  QCVision empowers manufacturers with AI-driven quality control, connecting
-                  camera systems, analytics, and operators in one unified platform.
+                <Typography variant="body1" color="text.secondary">
+                  Fruit inspection at scale is exhausting and repetitive, making it difficult to
+                  enforce consistent sorting standards.
                 </Typography>
+                <Typography variant="body1" color="text.secondary">
+                  Small and mid-scale stakeholders in the fruit value chain are priced out by
+                  costly automated solutions.
+                </Typography>
+                <Typography variant="body1" color="text.secondary">
+                  Manual sorting errors consume 26.6% of production value for mid-scale fruit
+                  operations—burning cash equivalent to 5x their annual profit.
+                </Typography>
+                <Typography variant="subtitle1" fontWeight={700}>
+                  QCVISION: A cross-platform, AI-powered fruit-scanning app and web dashboard for
+                  faster, more objective produce grading.
+                </Typography>
+                <Stack spacing={2}>
+                  {highlights.map((item) => (
+                    <Stack key={item.title} direction="row" spacing={2} alignItems="center">
+                      <Box sx={{ color: "primary.main" }}>{item.icon}</Box>
+                      <Box>
+                        <Typography variant="subtitle1" fontWeight={700}>
+                          {item.title}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {item.description}
+                        </Typography>
+                      </Box>
+                    </Stack>
+                  ))}
+                </Stack>
                 <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
                   <Button
                     component={Link}
@@ -122,12 +186,7 @@ export default function Home() {
                   >
                     Explore QCVision
                   </Button>
-                  <Button
-                    component={Link}
-                    href="#contact"
-                    variant="outlined"
-                    size="large"
-                  >
+                  <Button component={Link} href="#contact" variant="outlined" size="large">
                     Talk with QCVision
                   </Button>
                 </Stack>
@@ -146,53 +205,62 @@ export default function Home() {
               </Stack>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Card sx={{ p: { xs: 3, md: 5 }, borderRadius: 4 }}>
-                <Stack spacing={3}>
-                  <Typography variant="overline" color="primary">
-                    Trusted by manufacturing teams
-                  </Typography>
-                  <Typography variant="h5" fontWeight={700}>
-                    Automate inspections with vision models that adapt to every line.
-                  </Typography>
-                  <Typography color="text.secondary">
-                    QCVision blends AI models, integrated dashboards, and operator workflows to
-                    keep quality high and production moving.
-                  </Typography>
-                  <Stack spacing={2}>
-                    {highlights.map((item) => (
-                      <Stack key={item.title} direction="row" spacing={2} alignItems="center">
-                        <Box sx={{ color: "primary.main" }}>{item.icon}</Box>
-                        <Box>
-                          <Typography variant="subtitle1" fontWeight={700}>
-                            {item.title}
-                          </Typography>
-                          <Typography variant="body2" color="text.secondary">
-                            {item.description}
-                          </Typography>
-                        </Box>
-                      </Stack>
-                    ))}
-                  </Stack>
-                </Stack>
+              <Card sx={{ p: { xs: 2, md: 3 }, borderRadius: 4 }}>
+                <Box
+                  component="img"
+                  src="/Picture1.png"
+                  alt="Fruit inspection with QCVision"
+                  sx={{ width: "100%", borderRadius: 3 }}
+                />
               </Card>
             </Grid>
           </Grid>
         </Container>
       </Box>
 
-      <Container maxWidth="lg" component="section" id="solutions" sx={{ py: { xs: 7, md: 9 } }}>
+      <Container maxWidth="lg" component="section" sx={{ py: { xs: 6, md: 8 } }}>
+        <Stack spacing={2}>
+          <Typography variant="overline" color="primary">
+            Product visuals
+          </Typography>
+          <Typography variant="h4" fontWeight={700}>
+            Extra eyes across every grading station.
+          </Typography>
+        </Stack>
+        <Grid container spacing={3} sx={{ mt: 2 }}>
+          {galleryImages.map((image) => (
+            <Grid item xs={12} sm={6} md={4} key={image.src}>
+              <Card sx={{ borderRadius: 3, overflow: "hidden" }}>
+                <Box
+                  component="img"
+                  src={image.src}
+                  alt={image.alt}
+                  sx={{ width: "100%", height: 240, objectFit: "cover" }}
+                />
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+
+      <Container
+        maxWidth="lg"
+        component="section"
+        id="solution"
+        sx={{ py: { xs: 6, md: 8 } }}
+      >
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} md={6}>
             <Stack spacing={2} maxWidth={520}>
               <Typography variant="overline" color="primary">
-                Solutions
+                Solution
               </Typography>
               <Typography variant="h4" fontWeight={700}>
-                End-to-end quality intelligence
+                Consistent grading without the manual burden.
               </Typography>
               <Typography color="text.secondary">
-                From inspection to insight, QCVision delivers the tools manufacturers need to
-                elevate quality at every step of production.
+                QCVision combines mobile scanning with a cross-platform dashboard so teams can
+                track quality, automate documentation, and deploy new standards quickly.
               </Typography>
             </Stack>
           </Grid>
@@ -218,112 +286,88 @@ export default function Home() {
         </Grid>
       </Container>
 
-      <Box component="section" id="insights" sx={{ bgcolor: "grey.50", py: { xs: 7, md: 9 } }}>
+      <Box component="section" id="market" sx={{ bgcolor: "grey.50", py: { xs: 6, md: 8 } }}>
         <Container maxWidth="lg">
-          <Grid container spacing={6} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Card sx={{ p: { xs: 3, md: 4 }, borderRadius: 3 }}>
-                <Stack spacing={2}>
-                  <Typography variant="overline" color="primary">
-                    Insights
-                  </Typography>
-                  <Typography variant="h4" fontWeight={700}>
-                    Confidence for every line, every shift.
-                  </Typography>
-                  <Typography color="text.secondary">
-                    QCVision analytics empower quality leaders with transparent, accessible data.
-                    Track yield, understand defect patterns, and align teams around measurable
-                    outcomes.
-                  </Typography>
-                  <Stack spacing={1}>
-                    <Typography variant="subtitle1" fontWeight={700}>
-                      Accuracy you can trust
-                    </Typography>
-                    <Typography color="text.secondary">
-                      QCVision pairs deep learning with proven manufacturing expertise to deliver
-                      dependable defect detection.
-                    </Typography>
-                  </Stack>
-                  <Stack spacing={1}>
-                    <Typography variant="subtitle1" fontWeight={700}>
-                      Actionable visibility
-                    </Typography>
-                    <Typography color="text.secondary">
-                      From dashboards to alerts, every insight helps quality teams make confident
-                      decisions faster.
-                    </Typography>
-                  </Stack>
-                </Stack>
-              </Card>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Stack spacing={2}>
-                <Card sx={{ borderRadius: 3 }}>
+          <Stack spacing={2}>
+            <Typography variant="overline" color="primary">
+              Market & growth
+            </Typography>
+            <Typography variant="h4" fontWeight={700}>
+              Built for the global fresh produce market.
+            </Typography>
+          </Stack>
+          <Grid container spacing={3} sx={{ mt: 2 }}>
+            {marketStats.map((stat) => (
+              <Grid item xs={12} md={4} key={stat.label}>
+                <Card sx={{ borderRadius: 3, height: "100%" }}>
                   <CardContent>
                     <Stack spacing={1}>
-                      <Typography variant="subtitle1" fontWeight={700}>
-                        Collaborative partnership
+                      <Typography variant="overline" color="primary">
+                        {stat.label}
                       </Typography>
-                      <Typography color="text.secondary">
-                        Our customer success team works shoulder-to-shoulder with factory leaders to
-                        drive lasting change.
+                      <Typography variant="h4" fontWeight={700}>
+                        {stat.value}
                       </Typography>
+                      <Typography color="text.secondary">{stat.detail}</Typography>
                     </Stack>
                   </CardContent>
                 </Card>
-                <Card sx={{ borderRadius: 3 }}>
-                  <CardContent>
-                    <Stack spacing={1}>
-                      <Typography variant="subtitle1" fontWeight={700}>
-                        Real-time quality clarity
-                      </Typography>
-                      <Typography color="text.secondary">
-                        Monitor yield, detect drift early, and align every station on quality
-                        targets.
-                      </Typography>
-                    </Stack>
-                  </CardContent>
-                </Card>
-                <Card sx={{ borderRadius: 3 }}>
-                  <CardContent>
-                    <Stack spacing={1}>
-                      <Typography variant="subtitle1" fontWeight={700}>
-                        Operator-first workflows
-                      </Typography>
-                      <Typography color="text.secondary">
-                        Give front-line teams the guidance they need with intuitive dashboards and
-                        alerts.
-                      </Typography>
-                    </Stack>
-                  </CardContent>
-                </Card>
-                <Button
-                  component={Link}
-                  href="https://www.linkedin.com/company/qcvision/"
-                  variant="text"
-                  color="primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{ alignSelf: "flex-start" }}
-                >
-                  Follow our latest updates
-                </Button>
-              </Stack>
-            </Grid>
+              </Grid>
+            ))}
           </Grid>
+          <Stack spacing={2} sx={{ mt: 5 }}>
+            <Typography variant="overline" color="primary">
+              Annual subscription fees
+            </Typography>
+            <Grid container spacing={3}>
+              {pricingTiers.map((tier) => (
+                <Grid item xs={12} md={4} key={tier.value}>
+                  <Card sx={{ borderRadius: 3, height: "100%" }}>
+                    <CardContent>
+                      <Stack spacing={1}>
+                        <Typography variant="h4" fontWeight={700}>
+                          {tier.value}
+                        </Typography>
+                        <Typography color="text.secondary">{tier.detail}</Typography>
+                      </Stack>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Stack>
         </Container>
       </Box>
 
-      <Box component="section" id="contact" sx={{ py: { xs: 7, md: 9 } }}>
+      <Container maxWidth="lg" component="section" sx={{ py: { xs: 6, md: 8 } }}>
+        <Stack spacing={2} alignItems="center">
+          <Typography variant="overline" color="primary">
+            Supported by
+          </Typography>
+          <Stack direction={{ xs: "column", md: "row" }} spacing={4} alignItems="center">
+            {supporterLogos.map((logo) => (
+              <Box
+                key={logo.alt}
+                component="img"
+                src={logo.src}
+                alt={logo.alt}
+                sx={{ height: 48, objectFit: "contain" }}
+              />
+            ))}
+          </Stack>
+        </Stack>
+      </Container>
+
+      <Box component="section" id="contact" sx={{ py: { xs: 6, md: 8 } }}>
         <Container maxWidth="md">
           <Card sx={{ p: { xs: 3, md: 5 }, textAlign: "center", borderRadius: 3 }}>
             <Stack spacing={2} alignItems="center">
               <Typography variant="h4" fontWeight={700}>
-                Ready to modernize inspection?
+                Ready to digitise fruit inspection?
               </Typography>
               <Typography color="text.secondary">
-                Let&apos;s talk about how QCVision can elevate quality for your manufacturing
-                teams. Connect with us on LinkedIn to get started.
+                Let&apos;s talk about how QCVision can elevate quality for your fruit operations.
+                Connect with us on LinkedIn to get started.
               </Typography>
               <Button
                 component={Link}
@@ -353,20 +397,15 @@ export default function Home() {
                 QCVision
               </Typography>
               <Typography variant="body2" color="grey.400">
-                AI-powered quality control for modern manufacturing.
+                AI-powered fruit scanning for objective produce grading.
               </Typography>
             </Stack>
             <Stack direction="row" spacing={2}>
-              <Button
-                component={Link}
-                href="#solutions"
-                color="inherit"
-                size="small"
-              >
-                Solutions
+              <Button component={Link} href="#solution" color="inherit" size="small">
+                Solution
               </Button>
-              <Button component={Link} href="#contact" color="inherit" size="small">
-                Contact
+              <Button component={Link} href="#market" color="inherit" size="small">
+                Market
               </Button>
             </Stack>
           </Stack>
