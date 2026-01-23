@@ -78,9 +78,9 @@ const galleryImages = [
 ];
 
 const supporterLogos = [
-  { src: "/imperial%20logo.png", alt: "Imperial" },
-  { src: "/NUS%20logo.png", alt: "NUS" },
-  { src: "/GRIP%20logo.png", alt: "National GRIP" },
+  { src: "/imperial-logo.png", alt: "Imperial" },
+  { src: "/nus-logo.png", alt: "NUS" },
+  { src: "/grip-logo.png", alt: "National GRIP" },
 ];
 
 export default function Home() {
