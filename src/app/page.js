@@ -85,7 +85,7 @@ const dashboardImages = [
 
 const supporterLogos = [
   { src: "/imperial-logo.png", alt: "Imperial" },
-  { src: "/imperial-enterprise-lab.png", alt: "Imperial Enterprise Lab" },
+  { src: "/imperial-enterprise-lab.jpg", alt: "Imperial Enterprise Lab" },
   { src: "/nus-logo.png", alt: "NUS" },
   { src: "/grip-logo.png", alt: "National GRIP" },
   { src: "/NTU.png", alt: "NTU" },
@@ -244,8 +244,8 @@ export default function Home() {
               Extra eyes across every grading station.
             </Typography>
             <Typography color="text.secondary" maxWidth={680}>
-              The hero image highlights the handheld inspection experience. The visuals below show
-              the mobile app and the web dashboard that power consistent grading decisions.
+              The hero image highlights the handheld inspection experience. The visuals below show the
+              mobile app and the web dashboard that power consistent grading decisions.
             </Typography>
           </Stack>
           <Grid container spacing={3}>
