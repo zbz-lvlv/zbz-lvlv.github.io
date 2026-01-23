@@ -71,16 +71,24 @@ const galleryImages = [
   { src: "/Picture2.png", alt: "Apples on a conveyor line during inspection" },
   { src: "/Picture3.png", alt: "Mobile scan showing fruit defect classification" },
   { src: "/Picture4.png", alt: "Produce quality grading interface with labels" },
-  { src: "/Picture5.png", alt: "Close-up of fruit scan results on device" },
-  { src: "/Picture6.png", alt: "Dashboard showing fruit quality metrics and trends" },
-  { src: "/Picture7.png", alt: "Packhouse sorting line with workers and bins" },
-  { src: "/Picture8.png", alt: "Overview of grading workflow and quality checks" },
+];
+
+const mobileImages = [
+  { src: "/Picture5.png", alt: "Mobile app showing fruit scan results" },
+  { src: "/Picture6.png", alt: "Mobile app dashboard with quality summary" },
+];
+
+const dashboardImages = [
+  { src: "/Picture7.png", alt: "Web dashboard showing inspection overview" },
+  { src: "/Picture8.png", alt: "Web dashboard with grading analytics" },
 ];
 
 const supporterLogos = [
   { src: "/imperial-logo.png", alt: "Imperial" },
+  { src: "/imperial_enterprise_lab.jpg", alt: "Imperial Enterprise Lab" },
   { src: "/nus-logo.png", alt: "NUS" },
   { src: "/grip-logo.png", alt: "National GRIP" },
+  { src: "/NTU.png", alt: "NTU" },
 ];
 
 export default function Home() {
@@ -227,28 +235,88 @@ export default function Home() {
       </Box>
 
       <Container maxWidth="lg" component="section" sx={{ py: { xs: 6, md: 8 } }}>
-        <Stack spacing={2}>
-          <Typography variant="overline" color="primary">
-            Product visuals
-          </Typography>
-          <Typography variant="h4" fontWeight={700}>
-            Extra eyes across every grading station.
-          </Typography>
-        </Stack>
-        <Grid container spacing={3} sx={{ mt: 2 }}>
-          {galleryImages.map((image) => (
-            <Grid item xs={12} sm={6} md={4} key={image.src}>
-              <Card sx={{ borderRadius: 3, overflow: "hidden" }}>
-                <Box
-                  component="img"
-                  src={image.src}
-                  alt={image.alt}
-                  sx={{ width: "100%", height: 240, objectFit: "cover" }}
-                />
-              </Card>
+        <Stack spacing={4}>
+          <Stack spacing={2}>
+            <Typography variant="overline" color="primary">
+              Product visuals
+            </Typography>
+            <Typography variant="h4" fontWeight={700}>
+              Extra eyes across every grading station.
+            </Typography>
+            <Typography color="text.secondary" maxWidth={680}>
+              Picture1 shows the handheld inspection experience. The remaining visuals highlight
+              the mobile app and the web dashboard that power consistent grading decisions.
+            </Typography>
+          </Stack>
+          <Grid container spacing={3}>
+            {galleryImages.map((image) => (
+              <Grid item xs={12} sm={6} md={4} key={image.src}>
+                <Card sx={{ borderRadius: 3, overflow: "hidden" }}>
+                  <Box
+                    component="img"
+                    src={image.src}
+                    alt={image.alt}
+                    sx={{ width: "100%", height: 240, objectFit: "cover" }}
+                  />
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+          <Grid container spacing={3} alignItems="center">
+            <Grid item xs={12} md={4}>
+              <Stack spacing={1}>
+                <Typography variant="overline" color="primary">
+                  Mobile app
+                </Typography>
+                <Typography variant="h5" fontWeight={700}>
+                  Fast scans at the point of inspection.
+                </Typography>
+                <Typography color="text.secondary">
+                  Picture5 and Picture6 capture the mobile experience used by sorting teams.
+                </Typography>
+              </Stack>
             </Grid>
-          ))}
-        </Grid>
+            {mobileImages.map((image) => (
+              <Grid item xs={12} md={4} key={image.src}>
+                <Card sx={{ borderRadius: 3, overflow: "hidden" }}>
+                  <Box
+                    component="img"
+                    src={image.src}
+                    alt={image.alt}
+                    sx={{ width: "100%", height: 260, objectFit: "cover" }}
+                  />
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+          <Grid container spacing={3} alignItems="center">
+            <Grid item xs={12} md={4}>
+              <Stack spacing={1}>
+                <Typography variant="overline" color="primary">
+                  Web dashboard
+                </Typography>
+                <Typography variant="h5" fontWeight={700}>
+                  Real-time oversight for operations leaders.
+                </Typography>
+                <Typography color="text.secondary">
+                  Picture7 and Picture8 spotlight the analytics dashboard for grading insights.
+                </Typography>
+              </Stack>
+            </Grid>
+            {dashboardImages.map((image) => (
+              <Grid item xs={12} md={4} key={image.src}>
+                <Card sx={{ borderRadius: 3, overflow: "hidden" }}>
+                  <Box
+                    component="img"
+                    src={image.src}
+                    alt={image.alt}
+                    sx={{ width: "100%", height: 260, objectFit: "cover" }}
+                  />
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Stack>
       </Container>
 
       <Container
