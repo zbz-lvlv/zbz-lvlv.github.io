@@ -244,7 +244,7 @@ export default function Home() {
               Extra eyes across every grading station.
             </Typography>
             <Typography color="text.secondary" maxWidth={680}>
-              Picture1 shows the handheld inspection experience. The remaining visuals highlight
+              The hero image highlights the handheld inspection experience. The visuals below show
               the mobile app and the web dashboard that power consistent grading decisions.
             </Typography>
           </Stack>
@@ -272,7 +272,7 @@ export default function Home() {
                   Fast scans at the point of inspection.
                 </Typography>
                 <Typography color="text.secondary">
-                  Picture5 and Picture6 capture the mobile experience used by sorting teams.
+                  These mobile app views capture the experience used by sorting teams.
                 </Typography>
               </Stack>
             </Grid>
@@ -299,7 +299,7 @@ export default function Home() {
                   Real-time oversight for operations leaders.
                 </Typography>
                 <Typography color="text.secondary">
-                  Picture7 and Picture8 spotlight the analytics dashboard for grading insights.
+                  These dashboard screens spotlight analytics for grading insights.
                 </Typography>
               </Stack>
             </Grid>
