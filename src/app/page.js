@@ -85,7 +85,7 @@ const dashboardImages = [
 
 const supporterLogos = [
   { src: "/imperial-logo.png", alt: "Imperial" },
-  { src: "/imperial_enterprise_lab.jpg", alt: "Imperial Enterprise Lab" },
+  { src: "/imperial-enterprise-lab.png", alt: "Imperial Enterprise Lab" },
   { src: "/nus-logo.png", alt: "NUS" },
   { src: "/grip-logo.png", alt: "National GRIP" },
   { src: "/NTU.png", alt: "NTU" },
