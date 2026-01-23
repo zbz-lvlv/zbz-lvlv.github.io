@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./page.module.css";
 import {
   AppBar,
   Box,
@@ -69,7 +70,7 @@ const values = [
 
 export default function Home() {
   return (
-    <Box sx={{ bgcolor: "background.default" }}>
+    <Box className={styles.page} sx={{ bgcolor: "background.default" }}>
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar sx={{ justifyContent: "space-between", py: 1 }}>
           <Stack direction="row" spacing={1} alignItems="center">
