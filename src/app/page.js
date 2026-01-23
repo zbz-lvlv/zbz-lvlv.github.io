@@ -68,13 +68,13 @@ const pricingTiers = [
 ];
 
 const galleryImages = [
-  { src: "/Picture2.png", alt: "Fruit inspection example" },
-  { src: "/Picture3.png", alt: "Produce sorting workflow" },
-  { src: "/Picture4.png", alt: "Quality grading snapshot" },
-  { src: "/Picture5.png", alt: "Fruit scanning close-up" },
-  { src: "/Picture6.png", alt: "Produce quality dashboard" },
-  { src: "/Picture7.png", alt: "Packhouse inspection station" },
-  { src: "/Picture8.png", alt: "Grading process overview" },
+  { src: "/Picture2.png", alt: "Apples on a conveyor line during inspection" },
+  { src: "/Picture3.png", alt: "Mobile scan showing fruit defect classification" },
+  { src: "/Picture4.png", alt: "Produce quality grading interface with labels" },
+  { src: "/Picture5.png", alt: "Close-up of fruit scan results on device" },
+  { src: "/Picture6.png", alt: "Dashboard showing fruit quality metrics and trends" },
+  { src: "/Picture7.png", alt: "Packhouse sorting line with workers and bins" },
+  { src: "/Picture8.png", alt: "Overview of grading workflow and quality checks" },
 ];
 
 const supporterLogos = [
@@ -137,7 +137,7 @@ export default function Home() {
             <Grid item xs={12} md={6}>
               <Stack spacing={3}>
                 <Chip
-                  label="Extra eyes on every fruit, all checks digitised."
+                  label="Extra eyes on every fruit, all checks digitized."
                   color="secondary"
                   sx={{
                     width: "fit-content",
@@ -147,7 +147,7 @@ export default function Home() {
                   }}
                 />
                 <Typography variant="h3" component="h1" fontWeight={700}>
-                  Digitise fruit inspection with QCVISION.
+                  Digitize fruit inspection with QCVISION.
                 </Typography>
                 <Typography variant="body1" color="text.secondary">
                   Fruit inspection at scale is exhausting and repetitive, making it difficult to
@@ -207,6 +207,9 @@ export default function Home() {
                     </Box>
                   ))}
                 </Stack>
+                <Typography variant="caption" color="text.secondary">
+                  Metrics reflect mid-scale fruit operations and internal estimates.
+                </Typography>
               </Stack>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -214,7 +217,7 @@ export default function Home() {
                 <Box
                   component="img"
                   src="/Picture1.png"
-                  alt="Fruit inspection with QCVision"
+                  alt="Handheld scanner inspecting oranges on a packing line"
                   sx={{ width: "100%", borderRadius: 3 }}
                 />
               </Card>
@@ -368,7 +371,7 @@ export default function Home() {
           <Card sx={{ p: { xs: 3, md: 5 }, textAlign: "center", borderRadius: 3 }}>
             <Stack spacing={2} alignItems="center">
               <Typography variant="h4" fontWeight={700}>
-                Ready to digitise fruit inspection?
+                Ready to digitize fruit inspection?
               </Typography>
               <Typography color="text.secondary">
                 Let&apos;s talk about how QCVision can elevate quality for your fruit operations.
