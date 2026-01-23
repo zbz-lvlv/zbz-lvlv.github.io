@@ -19,6 +19,8 @@ import InsightsRoundedIcon from "@mui/icons-material/InsightsRounded";
 import PrecisionManufacturingRoundedIcon from "@mui/icons-material/PrecisionManufacturingRounded";
 import VisibilityRoundedIcon from "@mui/icons-material/VisibilityRounded";
 
+const withBasePath = (path) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+
 const highlights = [
   {
     title: "Improve operational efficiency",
@@ -68,27 +70,27 @@ const pricingTiers = [
 ];
 
 const galleryImages = [
-  { src: "/Picture2.png", alt: "Apples on a conveyor line during inspection" },
-  { src: "/Picture3.png", alt: "Mobile scan showing fruit defect classification" },
-  { src: "/Picture4.png", alt: "Produce quality grading interface with labels" },
+  { src: withBasePath("/Picture2.png"), alt: "Apples on a conveyor line during inspection" },
+  { src: withBasePath("/Picture3.png"), alt: "Mobile scan showing fruit defect classification" },
+  { src: withBasePath("/Picture4.png"), alt: "Produce quality grading interface with labels" },
 ];
 
 const mobileImages = [
-  { src: "/Picture5.png", alt: "Mobile app showing fruit scan results" },
-  { src: "/Picture6.png", alt: "Mobile app dashboard with quality summary" },
+  { src: withBasePath("/Picture5.png"), alt: "Mobile app showing fruit scan results" },
+  { src: withBasePath("/Picture6.png"), alt: "Mobile app dashboard with quality summary" },
 ];
 
 const dashboardImages = [
-  { src: "/Picture7.png", alt: "Web dashboard showing inspection overview" },
-  { src: "/Picture8.png", alt: "Web dashboard with grading analytics" },
+  { src: withBasePath("/Picture7.png"), alt: "Web dashboard showing inspection overview" },
+  { src: withBasePath("/Picture8.png"), alt: "Web dashboard with grading analytics" },
 ];
 
 const supporterLogos = [
-  { src: "/imperial-logo.png", alt: "Imperial" },
-  { src: "/imperial-enterprise-lab.jpg", alt: "Imperial Enterprise Lab" },
-  { src: "/nus-logo.png", alt: "NUS" },
-  { src: "/grip-logo.png", alt: "National GRIP" },
-  { src: "/NTU.png", alt: "NTU" },
+  { src: withBasePath("/imperial-logo.png"), alt: "Imperial" },
+  { src: withBasePath("/imperial-enterprise-lab.jpg"), alt: "Imperial Enterprise Lab" },
+  { src: withBasePath("/nus-logo.png"), alt: "NUS" },
+  { src: withBasePath("/grip-logo.png"), alt: "National GRIP" },
+  { src: withBasePath("/NTU.png"), alt: "NTU" },
 ];
 
 export default function Home() {
@@ -96,13 +98,13 @@ export default function Home() {
     <Box className={styles.page} sx={{ bgcolor: "background.default" }}>
       <AppBar position="sticky" color="transparent" elevation={0}>
         <Toolbar sx={{ justifyContent: "space-between", py: 2 }}>
-          <Stack direction="row" spacing={2} alignItems="center">
-            <Box
-              component="img"
-              src="/logo.png"
-              alt="QCVision logo"
-              sx={{ width: 44, height: 44 }}
-            />
+            <Stack direction="row" spacing={2} alignItems="center">
+              <Box
+                component="img"
+                src={withBasePath("/logo.png")}
+                alt="QCVision logo"
+                sx={{ width: 44, height: 44 }}
+              />
             <Stack spacing={0.2}>
               <Typography variant="h6" fontWeight={700}>
                 QCVision
@@ -224,7 +226,7 @@ export default function Home() {
               <Card sx={{ p: { xs: 2, md: 3 }, borderRadius: 4 }}>
                 <Box
                   component="img"
-                  src="/Picture1.png"
+                  src={withBasePath("/Picture1.png")}
                   alt="Handheld scanner inspecting oranges on a packing line"
                   sx={{ width: "100%", borderRadius: 3 }}
                 />
