@@ -73,6 +73,19 @@ const galleryImages = [
   { src: "/Picture4.png", alt: "Produce quality grading interface with labels" },
 ];
 
+const demoVideos = [
+  {
+    src: "/IMG_1691.MP4",
+    title: "Mobile inspection demo",
+    description: "See the handheld scan workflow used on the sorting line.",
+  },
+  {
+    src: "/qc%20dashboard.mp4",
+    title: "QC dashboard walkthrough",
+    description: "Explore the web dashboard used to track grading performance.",
+  },
+];
+
 const mobileImages = [
   { src: "/Picture5.png", alt: "Mobile app showing fruit scan results" },
   { src: "/Picture6.png", alt: "Mobile app dashboard with quality summary" },
@@ -235,23 +248,66 @@ export default function Home() {
       </Box>
 
       <Container maxWidth="lg" component="section" sx={{ py: { xs: 6, md: 8 } }}>
-        <Stack spacing={4}>
-          <Stack spacing={2}>
-            <Typography variant="overline" color="primary">
-              Product visuals
-            </Typography>
+          <Stack spacing={4}>
+            <Stack spacing={2}>
+              <Typography variant="overline" color="primary">
+                Product visuals
+              </Typography>
             <Typography variant="h4" fontWeight={700}>
               Extra eyes across every grading station.
             </Typography>
-            <Typography color="text.secondary" maxWidth={680}>
-              The hero image highlights the handheld inspection experience. The visuals below show the
-              mobile app and the web dashboard that power consistent grading decisions.
-            </Typography>
-          </Stack>
-          <Grid container spacing={3}>
-            {galleryImages.map((image) => (
-              <Grid item xs={12} sm={6} md={4} key={image.src}>
-                <Card sx={{ borderRadius: 3, overflow: "hidden" }}>
+              <Typography color="text.secondary" maxWidth={680}>
+                The hero image highlights the handheld inspection experience. The visuals below show the
+                mobile app and the web dashboard that power consistent grading decisions.
+              </Typography>
+            </Stack>
+            <Stack spacing={2}>
+              <Typography variant="overline" color="primary">
+                Demo videos
+              </Typography>
+              <Typography variant="h5" fontWeight={700}>
+                Watch QCVision in action.
+              </Typography>
+              <Typography color="text.secondary" maxWidth={680}>
+                See the mobile scanning workflow and the web dashboard analytics in motion.
+              </Typography>
+            </Stack>
+            <Grid container spacing={3}>
+              {demoVideos.map((video) => (
+                <Grid item xs={12} md={6} key={video.src}>
+                  <Card sx={{ borderRadius: 3, overflow: "hidden", height: "100%" }}>
+                    <Box
+                      component="video"
+                      src={video.src}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      aria-label={video.title}
+                      title={video.title}
+                      sx={{
+                        width: "100%",
+                        height: 260,
+                        objectFit: "cover",
+                        display: "block",
+                        bgcolor: "grey.100",
+                      }}
+                    />
+                    <CardContent>
+                      <Typography variant="subtitle1" fontWeight={700}>
+                        {video.title}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {video.description}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+            <Grid container spacing={3}>
+              {galleryImages.map((image) => (
+                <Grid item xs={12} sm={6} md={4} key={image.src}>
+                  <Card sx={{ borderRadius: 3, overflow: "hidden" }}>
                   <Box
                     component="img"
                     src={image.src}
