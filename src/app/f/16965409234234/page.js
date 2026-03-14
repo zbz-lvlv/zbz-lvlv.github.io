@@ -1,8 +1,8 @@
 import DownloadTrigger from "./download-trigger";
 
-const title = "QCVision Report";
+const title = "QCVision Batch Quality Assessment";
 const description =
-  "QCVision delivers AI-powered inspection and analytics for modern manufacturing.";
+  "QCVision delivers AI-powered inspection and analytics for perishables quality control.";
 
 export const metadata = {
   title,
@@ -15,7 +15,7 @@ export const metadata = {
     images: [
       {
         url: "/Screenshot 2026-03-14 at 23.40.41.png",
-        alt: "QCVision Report Preview",
+        alt: "QCVision Batch Quality Assessment Preview",
       },
     ],
     type: "website",

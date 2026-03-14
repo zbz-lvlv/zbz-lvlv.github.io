@@ -1,9 +1,9 @@
 import "./globals.css";
 import QCVisionThemeProvider from "./theme-provider";
 
-const title = "QCVision | AI Quality Control";
+const title = "QCVision | AI-Powered Perishables Quality Control";
 const description =
-  "QCVision delivers AI-powered inspection and analytics";
+  "QCVision delivers AI-powered inspection and analytics for perishables quality control.";
 
 export const metadata = {
   title,
