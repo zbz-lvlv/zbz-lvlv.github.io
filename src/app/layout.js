@@ -3,7 +3,7 @@ import QCVisionThemeProvider from "./theme-provider";
 
 const title = "QCVision | AI Quality Control";
 const description =
-  "QCVision delivers AI-powered inspection and analytics for modern manufacturing.";
+  "QCVision delivers AI-powered inspection and analytics";
 
 export const metadata = {
   title,
