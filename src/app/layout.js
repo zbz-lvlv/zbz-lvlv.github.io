@@ -1,15 +1,17 @@
 import "./globals.css";
 import QCVisionThemeProvider from "./theme-provider";
 
+const title = "QCVision | AI Quality Control";
+const description =
+  "QCVision delivers AI-powered inspection and analytics for modern manufacturing.";
+
 export const metadata = {
-  title: "QCVision | AI Quality Control",
-  description:
-    "QCVision delivers AI-powered inspection and analytics for modern manufacturing.",
+  title,
+  description,
   metadataBase: new URL("https://qcvision.me"),
   openGraph: {
-    title: "QCVision | AI Quality Control",
-    description:
-      "QCVision delivers AI-powered inspection and analytics for modern manufacturing.",
+    title,
+    description,
     url: "https://qcvision.me",
     siteName: "QCVision",
     images: [
@@ -22,9 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "QCVision | AI Quality Control",
-    description:
-      "QCVision delivers AI-powered inspection and analytics for modern manufacturing.",
+    title,
+    description,
     images: ["/logo.png"],
   },
 };
